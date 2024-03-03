@@ -10,9 +10,9 @@ const UserList = () => {
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
-        setListOfUser(response.data);
+        setListOfUser(response.data); //si on recout des donner on modifie avec le setteur
       })
-      .catch(error => {
+      .catch(error => {// au cas ou ya une errer on pourra le voir sur la consoloe
         console.error('UNE erreur s\'est produite', error);
       });
   }, []);
